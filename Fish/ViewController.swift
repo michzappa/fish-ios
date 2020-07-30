@@ -82,10 +82,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     // deletes room with HTTP DELETE REQUEST
     @objc func deleteRoom(){
         print("Delete Button tapped")
-        let roomName = self.CreateRoomNameField.text
-        print(roomName!)
+        let selectedRoomIndex = self.RoomList.selectedRow(inComponent: 0)
+        let roomName = self.roomNameList[selectedRoomIndex]
+        print(roomName)
         
-        let url = URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/rooms/\(roomName!)")
+        let url = URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/rooms/\(roomName)")
         guard let requestUrl = url else { fatalError() }
         
         var request = URLRequest(url: requestUrl)
