@@ -13,6 +13,14 @@ struct Room: Decodable {
     let turn: String
 }
 
+struct Player: Decodable {
+    let hand: [String]
+    let id: Int
+    let name: String
+    let room_id: Int
+    let team_id: Int
+}
+
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -22,10 +30,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var CreateRoomBtn: UIButton!
     @IBOutlet weak var DeleteRoomBtn: UIButton!
     @IBOutlet weak var RoomList: UIPickerView!
+    @IBOutlet weak var PlayerNameField: UITextField!
+    @IBOutlet weak var JoinRoomBtn: UIButton!
     
     // State of the app
     let session = URLSession.shared
     var roomNameList: [String] = [String]()
+    
+    // Values to pass on to the game view once properly initialized
+    var joinedRoomName: String? = "test";
+    var joiningPlayer: Player? = Player(hand: [], id: 1, name: "String", room_id: 1, team_id: 1);
     
     var refreshTimer: Timer?
     
@@ -42,8 +56,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.RoomList.delegate = self
         self.RoomList.dataSource = self
         
-        CreateRoomBtn.addTarget(self, action: #selector(createRoom), for: .touchDown)
-        DeleteRoomBtn.addTarget(self, action: #selector(deleteRoom), for: .touchDown)
+        self.CreateRoomBtn.addTarget(self, action: #selector(createRoom), for: .touchDown)
+        self.DeleteRoomBtn.addTarget(self, action: #selector(deleteRoom), for: .touchDown)
+        self.JoinRoomBtn.addTarget(self, action: #selector(joinRoom), for: .touchDown)
         super.viewDidLoad()
     }
 
@@ -107,6 +122,45 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.CreateRoomNameField.text = ""
     }
     
+    // sends POST request to add player to room on server
+    @objc func joinRoom(){
+        print("Join Button tapped")
+        let selectedRoomIndex = self.RoomList.selectedRow(inComponent: 0)
+        let roomName = self.roomNameList[selectedRoomIndex]
+        print(roomName)
+        
+        let playerName = self.PlayerNameField.text;
+        print(playerName!)
+        
+        let url = URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/players")
+        guard let requestUrl = url else { fatalError() }
+
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Powered by Swift!", forHTTPHeaderField: "X-Powered-By")
+        
+        let json: [String: Any] = ["room_name": "\(roomName)", "player_name": "\(playerName!)"]
+        let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
+
+        let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
+                if let error = error {
+                    print("Error: \(error)")
+                    return
+                }
+            
+            guard let data = data else { return }
+            //print(data)
+            let player: Player = try! JSONDecoder().decode(Player.self, from: data)
+            print(player)
+            self.joiningPlayer = player
+            self.joinedRoomName = roomName
+        }
+        task.resume()
+        
+        self.CreateRoomNameField.text = ""
+    }
+    
     // refreshes the displayed room list from the server with an HTTP GET request
     func refreshRoomList(){
         let url=URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/rooms")
@@ -140,6 +194,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return roomNameList[row]
     }
 
+    // transmits the player name and room name to the GameViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "JoinGame" {
+            if segue.destination is GameViewController {
+                let destination = segue.destination as! GameViewController
+                destination.player = self.joiningPlayer!
+                destination.roomName = self.joinedRoomName!
+            }
+        }
+    }
 }
 
 
