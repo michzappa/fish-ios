@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     let session = URLSession.shared
     
     @IBOutlet weak var RoomNameLabel: UILabel!
@@ -20,6 +20,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var OpponentsLabel: UILabel!
     @IBOutlet weak var LastMoveLabel: UILabel!
     @IBOutlet weak var CurrentTurnLabel: UILabel!
+    @IBOutlet weak var SelectOpponentPicker: UIPickerView!
+    @IBOutlet weak var SelectCardPicker: UIPickerView!
+    @IBOutlet weak var AskForCardBtn: UIButton!
     
     var player: Player? = nil;
     var roomName: String? = nil;
@@ -35,23 +38,53 @@ class GameViewController: UIViewController {
         // refresh from server
         refreshTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             
-            self.refreshTeamState()
-            self.TeammatesLabel.text = "Teammates: \(self.makeNameString(players: self.teammates ?? []))"
-            self.TeamScoreLabel.text = "Score: \(self.team?.claims.count ?? 0)"
-            
-            self.refreshOpponentState()
-            self.OpponentScoreLabel.text = "Score: \(self.opponentTeam?.claims.count ?? 0)"
-            self.OpponentsLabel.text = "Opponents: \(self.makeNameString(players: self.opponents ?? []))"
-            
-            self.refreshRoomStruct()
-            self.LastMoveLabel.text = "Last Move: \(self.room?.move ?? "")"
-            self.CurrentTurnLabel.text = "Turn: \(self.room?.turn ?? "")"
+            self.refreshInformation()
         }
+        
+        // UIPickerView setup
+        self.SelectOpponentPicker.delegate = self
+        self.SelectOpponentPicker.dataSource = self
+        self.SelectCardPicker.delegate = self
+        self.SelectCardPicker.dataSource = self
         
         self.RoomNameLabel.text = "Room: \(self.roomName!)"
         self.PlayerNameLabel.text = "Player: \(self.player!.name)"
         self.HandLabel.text = "Hand:\n\(self.makeStringOfHand())"
+        self.refreshInformation()
         
+        super.viewDidLoad()
+    }
+    
+    // Picker with tag 1 is the select opponent picker
+    func numberOfComponents(in pickerView: UIPickerView)->Int{
+        return 1;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int)->Int{
+        if pickerView.tag == 1 {
+            return self.opponents?.count ?? 0
+        }
+        if pickerView.tag == 2 {
+            return self.player?.hand.count ?? 0
+        }
+        
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int)-> String?{
+        if pickerView.tag == 1 {
+            return self.opponents?[row].name ?? ""
+        }
+        if pickerView.tag == 2 {
+            return self.player?.hand[row] ?? ""
+        }
+        
+        return "blank"
+    }
+    
+    
+    // refreshes the state of the displayed information
+    func refreshInformation(){
         self.refreshTeamState()
         self.TeamScoreLabel.text = "Score: \(self.team?.claims.count ?? 0)"
         self.TeammatesLabel.text = "Teammates: \(self.makeNameString(players: self.teammates ?? []))"
@@ -60,11 +93,13 @@ class GameViewController: UIViewController {
         self.OpponentScoreLabel.text = "Score: \(self.opponentTeam?.claims.count ?? 0)"
         self.OpponentsLabel.text = "Opponents: \(self.makeNameString(players: self.opponents ?? []))"
         
+        self.refreshRoomStruct()
         self.LastMoveLabel.text = "Last Move: \(self.room?.move ?? "")"
         self.CurrentTurnLabel.text = "Turn: \(self.room?.turn ?? "")"
-        super.viewDidLoad()
+        
+        self.SelectCardPicker.reloadAllComponents();
+        self.SelectOpponentPicker.reloadAllComponents();
     }
-    
     // GETs the room struct from the server
     func refreshRoomStruct(){
         let url=URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/rooms/\(self.player!.room_id)")
