@@ -48,12 +48,46 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         self.SelectCardPicker.delegate = self
         self.SelectCardPicker.dataSource = self
         
+        self.AskForCardBtn.addTarget(self, action: #selector(askForCard), for: .touchDown)
+        
         self.RoomNameLabel.text = "Room: \(self.roomName!)"
         self.PlayerNameLabel.text = "Player: \(self.player!.name)"
-        self.HandLabel.text = "Hand:\n\(self.makeStringOfHand())"
+        
         self.refreshInformation()
         
         super.viewDidLoad()
+    }
+
+    // Sends PUT request to server to attempt to exchange cards between the game's player and the selected opponent.
+    @objc func askForCard(){
+        let selectedOpponentIndex = self.SelectOpponentPicker.selectedRow(inComponent: 0)
+        let selectedOpponent = self.opponents![selectedOpponentIndex]
+        
+        let selectedCardIndex = self.SelectCardPicker.selectedRow(inComponent: 0)
+        let selectedCard = self.cardsCanAskFor![selectedCardIndex]
+        
+        let url = URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/players")
+        guard let requestUrl = url else { fatalError() }
+
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "PUT"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Powered by Swift!", forHTTPHeaderField: "X-Powered-By")
+        
+        let json: [String: Any] = ["asking_id": self.player!.id, "asked_id": selectedOpponent.id, "card": selectedCard, "room_id": self.room!.id]
+        let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
+
+        let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
+                if let error = error {
+                        print("Error: \(error)")
+                        return
+                    }
+                
+                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                    print(dataString)
+                }
+        }
+        task.resume()
     }
     
     // Picker with tag 1 is the select opponent picker
@@ -100,6 +134,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         
         self.refreshPlayerStruct()
+        self.HandLabel.text = "Hand:\n\(self.makeStringOfHand())"
         self.refreshCardsAskFor()
         
         self.SelectCardPicker.reloadAllComponents();

@@ -71,7 +71,7 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                 }
             
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                //print(dataString)
+                print(dataString)
             }
         }
         task.resume()
