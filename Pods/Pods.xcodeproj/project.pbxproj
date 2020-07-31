@@ -1,0 +1,1004 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07F9856D9CC1E82BFED92FFAB40673E6 /* RSSelectionMenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D787EA8FE78620D20906157B1257BC /* RSSelectionMenuDataSource.swift */; };
+		0DCB716C4410A81D9FEAE12F1CB7254E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2E9943836413C134A91B4FA7D0FF44C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		445ED3BE7B9D0D524D2C3E09FFC8A847 /* RSFirstRowSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9FFD97AF402B9ECB7CA8416CDE39 /* RSFirstRowSelection.swift */; };
+		50905F9CE97CFCDCD9AF2827BD6D3DAC /* NavigationBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BD56CA23AA5FA0514130A653E2E9A /* NavigationBarTheme.swift */; };
+		537CBF80DFA6F88345C41A13902F9A7A /* RSSelectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A8A9F1A9D3C450C885C0D970A6262 /* RSSelectionTableView.swift */; };
+		63F112A6A11310451746D908B7D50380 /* Pods-FishTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35F87D829CC9D1D525C98D2890A83171 /* Pods-FishTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		724BF6F22CEDF5FFD945E971E9F6CF5A /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E74A83298FED252E7EFCB4B32C23D8 /* ViewControllerExtension.swift */; };
+		7266CFA69F959C7BEFBD456E1DEDFB79 /* RSSelectionMenuSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63615CED5C36D6C51D0A67E0AFDA0A63 /* RSSelectionMenuSearchDelegate.swift */; };
+		731E511CD2D52C15EE5B0363184B4C2F /* RSSelectionMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9AA331D32C0E4A96060FAE062CBF87 /* RSSelectionMenu-dummy.m */; };
+		77F80DCDD54A5236B348B0BA073E106B /* RSSelectionMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF30C8D446316CD160F11F56F2826ED /* RSSelectionMenuController.swift */; };
+		87F2AE6C6B49B38C5D93558DFB7A8DA0 /* Pods-Fish-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9590D7FA160335A60528542A4A288A /* Pods-Fish-dummy.m */; };
+		93AAD9862884BB6200DF57482E5EAA1C /* RSSelectionMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBEC0967CBE5577862C58C4073992BC /* RSSelectionMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FA16024FC18EBE7B5180D51A5C88BC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B2CB30772600F9012B3442B303AD3BC9 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D55F1F812A5BA72B7DA20084E5ED1 /* Enums.swift */; };
+		C58166BA84105EB0AD970E8EEF23A467 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C330F9FDC2C7FCEADFB63D19DF3D41 /* Constants.swift */; };
+		C58CF04269D8EA10C75E163E57F66F5B /* Pods-FishTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B873ECE5DEF69EE0F6C6489B333D8 /* Pods-FishTests-dummy.m */; };
+		C77F9DD1D147CAA8FC50E67453C82319 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D04F49EF80FAEB1AABD670590FDE5CF3 /* Pods-Fish-FishUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 324E58431A6D2130DFAA418F6BD928CE /* Pods-Fish-FishUITests-dummy.m */; };
+		E09F40BFE4BF744E3FA69EBC4A5796CA /* RSSelectionMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E62AA2499916753F6B8B86BB797730A /* RSSelectionMenuDelegate.swift */; };
+		EFD2CC1E5FA13A7D8A78AF7EBB3234C1 /* Pods-Fish-FishUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C036A168570F10ECA5AEAF7518541ED /* Pods-Fish-FishUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3A37D738D40BFDCDA1884BE6188860B /* Pods-Fish-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4847A3620930B3822BB674971AFD4D /* Pods-Fish-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		465BC3289180DACF9DE0AB8F7BC7F9E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4BA747C8987B7580A893EC859D12686;
+			remoteInfo = RSSelectionMenu;
+		};
+		6A818850AB40D2D5BC2E5D95B849CA08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4BA747C8987B7580A893EC859D12686;
+			remoteInfo = RSSelectionMenu;
+		};
+		D84298A7688B54F1C36E679D59194BF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2894E1E1F3E2B3C4025165E805979541;
+			remoteInfo = "Pods-Fish";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		038849C49B66565E0AC16D16A80B0F44 /* RSSelectionMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RSSelectionMenu.release.xcconfig; sourceTree = "<group>"; };
+		03FC682655F2FB5FF92287DA417D2FBB /* Pods-Fish-FishUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Fish-FishUITests.modulemap"; sourceTree = "<group>"; };
+		062C1F41D5C1B17247F2335262D711FF /* Pods-Fish-FishUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Fish-FishUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0B820F85989CE570F38FFBB9018B5ED0 /* Pods_Fish_FishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Fish_FishUITests.framework; path = "Pods-Fish-FishUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5B3E6BF1ACE5374718D300AA9E19F7 /* RSSelectionMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RSSelectionMenu.modulemap; sourceTree = "<group>"; };
+		1E0DC28618405AA2403075D602571A02 /* Pods-Fish-FishUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Fish-FishUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2593B28A08661400F18E4EC0290E735A /* Pods-Fish-FishUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Fish-FishUITests-Info.plist"; sourceTree = "<group>"; };
+		2C1D5382EECD5C99186904D9F107762E /* RSSelectionMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RSSelectionMenu-Info.plist"; sourceTree = "<group>"; };
+		2E5CB039132C1729937CD30F26BE4DC9 /* Pods-FishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FishTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F9B873ECE5DEF69EE0F6C6489B333D8 /* Pods-FishTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FishTests-dummy.m"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		324E58431A6D2130DFAA418F6BD928CE /* Pods-Fish-FishUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Fish-FishUITests-dummy.m"; sourceTree = "<group>"; };
+		3479937E5887B6125A360768F51BE7BF /* Pods-FishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FishTests.debug.xcconfig"; sourceTree = "<group>"; };
+		35F87D829CC9D1D525C98D2890A83171 /* Pods-FishTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FishTests-umbrella.h"; sourceTree = "<group>"; };
+		3F4847A3620930B3822BB674971AFD4D /* Pods-Fish-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Fish-umbrella.h"; sourceTree = "<group>"; };
+		4168AD5144297E54DB3CC0C8B1A7E109 /* Pods-Fish-FishUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Fish-FishUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		463A777DDF6A118EB418D715306D69A2 /* Pods_FishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FishTests.framework; path = "Pods-FishTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C036A168570F10ECA5AEAF7518541ED /* Pods-Fish-FishUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Fish-FishUITests-umbrella.h"; sourceTree = "<group>"; };
+		59C330F9FDC2C7FCEADFB63D19DF3D41 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = RSSelectionMenu/RSSelectionMenu/Utilities/Constants.swift; sourceTree = "<group>"; };
+		5A7B9FFD97AF402B9ECB7CA8416CDE39 /* RSFirstRowSelection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSFirstRowSelection.swift; path = RSSelectionMenu/RSSelectionMenu/Source/RSFirstRowSelection.swift; sourceTree = "<group>"; };
+		5E62AA2499916753F6B8B86BB797730A /* RSSelectionMenuDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSSelectionMenuDelegate.swift; path = RSSelectionMenu/RSSelectionMenu/Source/RSSelectionMenuDelegate.swift; sourceTree = "<group>"; };
+		63615CED5C36D6C51D0A67E0AFDA0A63 /* RSSelectionMenuSearchDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSSelectionMenuSearchDelegate.swift; path = RSSelectionMenu/RSSelectionMenu/Source/RSSelectionMenuSearchDelegate.swift; sourceTree = "<group>"; };
+		66341F4CA800BB7E7C8CADAD4639DE94 /* Pods-FishTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FishTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		70BA1731495B2A114FB028429489B758 /* RSSelectionMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RSSelectionMenu.debug.xcconfig; sourceTree = "<group>"; };
+		74E74A83298FED252E7EFCB4B32C23D8 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewControllerExtension.swift; path = RSSelectionMenu/RSSelectionMenu/Utilities/Extensions/ViewControllerExtension.swift; sourceTree = "<group>"; };
+		7F62F9E0AA281F1A8C56E079D679E87E /* Pods-FishTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FishTests.modulemap"; sourceTree = "<group>"; };
+		855E007FF95B3605C414FBEE26616EC2 /* Pods-Fish-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Fish-Info.plist"; sourceTree = "<group>"; };
+		8E4A8A9F1A9D3C450C885C0D970A6262 /* RSSelectionTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSSelectionTableView.swift; path = RSSelectionMenu/RSSelectionMenu/Source/RSSelectionTableView.swift; sourceTree = "<group>"; };
+		95D787EA8FE78620D20906157B1257BC /* RSSelectionMenuDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSSelectionMenuDataSource.swift; path = RSSelectionMenu/RSSelectionMenu/Source/RSSelectionMenuDataSource.swift; sourceTree = "<group>"; };
+		9AC749E3E604F47020C3E27B0C0DC3BC /* Pods-Fish-FishUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Fish-FishUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DA20B39C6A11856ECB567F673BF74A9 /* Pods-Fish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Fish.debug.xcconfig"; sourceTree = "<group>"; };
+		9EDD6045F73883DD44117B11211B58BB /* Pods-Fish.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Fish.modulemap"; sourceTree = "<group>"; };
+		AC6347117238830270BADA58FAF61BCD /* Pods-FishTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FishTests-Info.plist"; sourceTree = "<group>"; };
+		ACF30C8D446316CD160F11F56F2826ED /* RSSelectionMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSSelectionMenuController.swift; path = RSSelectionMenu/RSSelectionMenu/Source/RSSelectionMenuController.swift; sourceTree = "<group>"; };
+		B09D55F1F812A5BA72B7DA20084E5ED1 /* Enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = RSSelectionMenu/RSSelectionMenu/Utilities/Enums.swift; sourceTree = "<group>"; };
+		B29761DBD3F2D8E2D9B4DE0F4D4F1D41 /* Pods-Fish-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Fish-frameworks.sh"; sourceTree = "<group>"; };
+		BBD6BAA9BCFD3B166401CBAFD66D2BD7 /* Pods-FishTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FishTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BF6BD56CA23AA5FA0514130A653E2E9A /* NavigationBarTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationBarTheme.swift; path = RSSelectionMenu/RSSelectionMenu/Source/NavigationBarTheme.swift; sourceTree = "<group>"; };
+		BFAB0370A45067FBB521A35A8F1FB77E /* RSSelectionMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSSelectionMenu-prefix.pch"; sourceTree = "<group>"; };
+		C31F894898EA6B03C84BFFF2819518A2 /* Pods-Fish-FishUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Fish-FishUITests-frameworks.sh"; sourceTree = "<group>"; };
+		C7AF9EEE4AB2B41819533A107185185E /* Pods_Fish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Fish.framework; path = "Pods-Fish.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C4578432714A1A74A7A0C4B4023447 /* RSSelectionMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RSSelectionMenu.framework; path = RSSelectionMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0D10543026E7C747636A082C81CA75 /* Pods-Fish-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Fish-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DABE1A987967F03CEDD54AF68A79629B /* Pods-Fish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Fish.release.xcconfig"; sourceTree = "<group>"; };
+		EC9590D7FA160335A60528542A4A288A /* Pods-Fish-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Fish-dummy.m"; sourceTree = "<group>"; };
+		EFBEC0967CBE5577862C58C4073992BC /* RSSelectionMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSSelectionMenu-umbrella.h"; sourceTree = "<group>"; };
+		F953A2C721610A01FF4F736586462A6E /* Pods-Fish-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Fish-acknowledgements.plist"; sourceTree = "<group>"; };
+		FC9AA331D32C0E4A96060FAE062CBF87 /* RSSelectionMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RSSelectionMenu-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DA5E8E660C337E95C5009FCB9385E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DCB716C4410A81D9FEAE12F1CB7254E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5595C18891637729D0F4966DB7488561 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C77F9DD1D147CAA8FC50E67453C82319 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B528A7F7E70993C14FFF71CE8E2394D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FA16024FC18EBE7B5180D51A5C88BC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EBEDC4DC29D40C2C8E090DABF277E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9943836413C134A91B4FA7D0FF44C6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3788573005C352B16A2B4A003DEA2DDA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F5B3E6BF1ACE5374718D300AA9E19F7 /* RSSelectionMenu.modulemap */,
+				FC9AA331D32C0E4A96060FAE062CBF87 /* RSSelectionMenu-dummy.m */,
+				2C1D5382EECD5C99186904D9F107762E /* RSSelectionMenu-Info.plist */,
+				BFAB0370A45067FBB521A35A8F1FB77E /* RSSelectionMenu-prefix.pch */,
+				EFBEC0967CBE5577862C58C4073992BC /* RSSelectionMenu-umbrella.h */,
+				70BA1731495B2A114FB028429489B758 /* RSSelectionMenu.debug.xcconfig */,
+				038849C49B66565E0AC16D16A80B0F44 /* RSSelectionMenu.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RSSelectionMenu";
+			sourceTree = "<group>";
+		};
+		9A5A3E11D8719A781D14AEDE06F2D635 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A17B3D18865F38A3EA5B9CC25D8C3716 /* RSSelectionMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A17B3D18865F38A3EA5B9CC25D8C3716 /* RSSelectionMenu */ = {
+			isa = PBXGroup;
+			children = (
+				59C330F9FDC2C7FCEADFB63D19DF3D41 /* Constants.swift */,
+				B09D55F1F812A5BA72B7DA20084E5ED1 /* Enums.swift */,
+				BF6BD56CA23AA5FA0514130A653E2E9A /* NavigationBarTheme.swift */,
+				5A7B9FFD97AF402B9ECB7CA8416CDE39 /* RSFirstRowSelection.swift */,
+				ACF30C8D446316CD160F11F56F2826ED /* RSSelectionMenuController.swift */,
+				95D787EA8FE78620D20906157B1257BC /* RSSelectionMenuDataSource.swift */,
+				5E62AA2499916753F6B8B86BB797730A /* RSSelectionMenuDelegate.swift */,
+				63615CED5C36D6C51D0A67E0AFDA0A63 /* RSSelectionMenuSearchDelegate.swift */,
+				8E4A8A9F1A9D3C450C885C0D970A6262 /* RSSelectionTableView.swift */,
+				74E74A83298FED252E7EFCB4B32C23D8 /* ViewControllerExtension.swift */,
+				3788573005C352B16A2B4A003DEA2DDA /* Support Files */,
+			);
+			name = RSSelectionMenu;
+			path = RSSelectionMenu;
+			sourceTree = "<group>";
+		};
+		AC4F441460D05629B569A4DDC5008D51 /* Pods-Fish */ = {
+			isa = PBXGroup;
+			children = (
+				9EDD6045F73883DD44117B11211B58BB /* Pods-Fish.modulemap */,
+				CE0D10543026E7C747636A082C81CA75 /* Pods-Fish-acknowledgements.markdown */,
+				F953A2C721610A01FF4F736586462A6E /* Pods-Fish-acknowledgements.plist */,
+				EC9590D7FA160335A60528542A4A288A /* Pods-Fish-dummy.m */,
+				B29761DBD3F2D8E2D9B4DE0F4D4F1D41 /* Pods-Fish-frameworks.sh */,
+				855E007FF95B3605C414FBEE26616EC2 /* Pods-Fish-Info.plist */,
+				3F4847A3620930B3822BB674971AFD4D /* Pods-Fish-umbrella.h */,
+				9DA20B39C6A11856ECB567F673BF74A9 /* Pods-Fish.debug.xcconfig */,
+				DABE1A987967F03CEDD54AF68A79629B /* Pods-Fish.release.xcconfig */,
+			);
+			name = "Pods-Fish";
+			path = "Target Support Files/Pods-Fish";
+			sourceTree = "<group>";
+		};
+		C05D6E15E3CE71F5C02085AB047F98B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF9EEE4AB2B41819533A107185185E /* Pods_Fish.framework */,
+				0B820F85989CE570F38FFBB9018B5ED0 /* Pods_Fish_FishUITests.framework */,
+				463A777DDF6A118EB418D715306D69A2 /* Pods_FishTests.framework */,
+				C8C4578432714A1A74A7A0C4B4023447 /* RSSelectionMenu.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				9A5A3E11D8719A781D14AEDE06F2D635 /* Pods */,
+				C05D6E15E3CE71F5C02085AB047F98B7 /* Products */,
+				DFA8FBD81F705EAB354E37707425B57D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7068597FCFC59415937D72B4C869796 /* Pods-Fish-FishUITests */ = {
+			isa = PBXGroup;
+			children = (
+				03FC682655F2FB5FF92287DA417D2FBB /* Pods-Fish-FishUITests.modulemap */,
+				062C1F41D5C1B17247F2335262D711FF /* Pods-Fish-FishUITests-acknowledgements.markdown */,
+				4168AD5144297E54DB3CC0C8B1A7E109 /* Pods-Fish-FishUITests-acknowledgements.plist */,
+				324E58431A6D2130DFAA418F6BD928CE /* Pods-Fish-FishUITests-dummy.m */,
+				C31F894898EA6B03C84BFFF2819518A2 /* Pods-Fish-FishUITests-frameworks.sh */,
+				2593B28A08661400F18E4EC0290E735A /* Pods-Fish-FishUITests-Info.plist */,
+				4C036A168570F10ECA5AEAF7518541ED /* Pods-Fish-FishUITests-umbrella.h */,
+				1E0DC28618405AA2403075D602571A02 /* Pods-Fish-FishUITests.debug.xcconfig */,
+				9AC749E3E604F47020C3E27B0C0DC3BC /* Pods-Fish-FishUITests.release.xcconfig */,
+			);
+			name = "Pods-Fish-FishUITests";
+			path = "Target Support Files/Pods-Fish-FishUITests";
+			sourceTree = "<group>";
+		};
+		DFA8FBD81F705EAB354E37707425B57D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC4F441460D05629B569A4DDC5008D51 /* Pods-Fish */,
+				D7068597FCFC59415937D72B4C869796 /* Pods-Fish-FishUITests */,
+				F9E5017639F9B6B69961DBCF8D7915C0 /* Pods-FishTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F9E5017639F9B6B69961DBCF8D7915C0 /* Pods-FishTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F62F9E0AA281F1A8C56E079D679E87E /* Pods-FishTests.modulemap */,
+				BBD6BAA9BCFD3B166401CBAFD66D2BD7 /* Pods-FishTests-acknowledgements.markdown */,
+				66341F4CA800BB7E7C8CADAD4639DE94 /* Pods-FishTests-acknowledgements.plist */,
+				2F9B873ECE5DEF69EE0F6C6489B333D8 /* Pods-FishTests-dummy.m */,
+				AC6347117238830270BADA58FAF61BCD /* Pods-FishTests-Info.plist */,
+				35F87D829CC9D1D525C98D2890A83171 /* Pods-FishTests-umbrella.h */,
+				3479937E5887B6125A360768F51BE7BF /* Pods-FishTests.debug.xcconfig */,
+				2E5CB039132C1729937CD30F26BE4DC9 /* Pods-FishTests.release.xcconfig */,
+			);
+			name = "Pods-FishTests";
+			path = "Target Support Files/Pods-FishTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1FA8D35A1AA52A1C07C382E2C9803E0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63F112A6A11310451746D908B7D50380 /* Pods-FishTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24155FFD7A3BA24BC646392E5351A47D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93AAD9862884BB6200DF57482E5EAA1C /* RSSelectionMenu-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		404271CF3200080AFF19F9F891EF5206 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD2CC1E5FA13A7D8A78AF7EBB3234C1 /* Pods-Fish-FishUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68D24418ED8DBE3A9FFBA5909BD4F31 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3A37D738D40BFDCDA1884BE6188860B /* Pods-Fish-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2894E1E1F3E2B3C4025165E805979541 /* Pods-Fish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FC4E00E275280036A63B1A221135812 /* Build configuration list for PBXNativeTarget "Pods-Fish" */;
+			buildPhases = (
+				D68D24418ED8DBE3A9FFBA5909BD4F31 /* Headers */,
+				106C554B182FFC890C1D78E02E22D7DF /* Sources */,
+				5595C18891637729D0F4966DB7488561 /* Frameworks */,
+				0818FBCF0E847471256E4D2737B3CDA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A5B342B64588111D51FEB7AB6C215AB /* PBXTargetDependency */,
+			);
+			name = "Pods-Fish";
+			productName = "Pods-Fish";
+			productReference = C7AF9EEE4AB2B41819533A107185185E /* Pods_Fish.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2C438D43F3031D60D0F1772A99FBACE0 /* Pods-Fish-FishUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A9831171B5BFBD2D4405575BCF12B4A /* Build configuration list for PBXNativeTarget "Pods-Fish-FishUITests" */;
+			buildPhases = (
+				404271CF3200080AFF19F9F891EF5206 /* Headers */,
+				4410A977718C485101BF67C60B3E09E7 /* Sources */,
+				B528A7F7E70993C14FFF71CE8E2394D8 /* Frameworks */,
+				9E9A16897D22D408536F309C7DA11433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				211EC7B3F18A56F388051198AD6DF28D /* PBXTargetDependency */,
+			);
+			name = "Pods-Fish-FishUITests";
+			productName = "Pods-Fish-FishUITests";
+			productReference = 0B820F85989CE570F38FFBB9018B5ED0 /* Pods_Fish_FishUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4CACD5C45F944D532C63AD706BAF7E1F /* Pods-FishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FAF91B2F8483B4DEB444C9D677980A0 /* Build configuration list for PBXNativeTarget "Pods-FishTests" */;
+			buildPhases = (
+				1FA8D35A1AA52A1C07C382E2C9803E0D /* Headers */,
+				293249908D1D45036FC85A92DBADDF81 /* Sources */,
+				C9EBEDC4DC29D40C2C8E090DABF277E9 /* Frameworks */,
+				00FF17C47C83DA1E38258A36AB088C74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				367690D133B65E181898D8B59D834CF9 /* PBXTargetDependency */,
+			);
+			name = "Pods-FishTests";
+			productName = "Pods-FishTests";
+			productReference = 463A777DDF6A118EB418D715306D69A2 /* Pods_FishTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F4BA747C8987B7580A893EC859D12686 /* RSSelectionMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4358BCB0C1D7B15523790143FEA84474 /* Build configuration list for PBXNativeTarget "RSSelectionMenu" */;
+			buildPhases = (
+				24155FFD7A3BA24BC646392E5351A47D /* Headers */,
+				59E51D0A00D746EACA9EFCC1984729C3 /* Sources */,
+				2DA5E8E660C337E95C5009FCB9385E14 /* Frameworks */,
+				E0D3824A35D6CBE8EEBFA73937981B7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSSelectionMenu;
+			productName = RSSelectionMenu;
+			productReference = C8C4578432714A1A74A7A0C4B4023447 /* RSSelectionMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C05D6E15E3CE71F5C02085AB047F98B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2894E1E1F3E2B3C4025165E805979541 /* Pods-Fish */,
+				2C438D43F3031D60D0F1772A99FBACE0 /* Pods-Fish-FishUITests */,
+				4CACD5C45F944D532C63AD706BAF7E1F /* Pods-FishTests */,
+				F4BA747C8987B7580A893EC859D12686 /* RSSelectionMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00FF17C47C83DA1E38258A36AB088C74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0818FBCF0E847471256E4D2737B3CDA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E9A16897D22D408536F309C7DA11433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0D3824A35D6CBE8EEBFA73937981B7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		106C554B182FFC890C1D78E02E22D7DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F2AE6C6B49B38C5D93558DFB7A8DA0 /* Pods-Fish-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293249908D1D45036FC85A92DBADDF81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58CF04269D8EA10C75E163E57F66F5B /* Pods-FishTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4410A977718C485101BF67C60B3E09E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D04F49EF80FAEB1AABD670590FDE5CF3 /* Pods-Fish-FishUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59E51D0A00D746EACA9EFCC1984729C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58166BA84105EB0AD970E8EEF23A467 /* Constants.swift in Sources */,
+				B2CB30772600F9012B3442B303AD3BC9 /* Enums.swift in Sources */,
+				50905F9CE97CFCDCD9AF2827BD6D3DAC /* NavigationBarTheme.swift in Sources */,
+				445ED3BE7B9D0D524D2C3E09FFC8A847 /* RSFirstRowSelection.swift in Sources */,
+				731E511CD2D52C15EE5B0363184B4C2F /* RSSelectionMenu-dummy.m in Sources */,
+				77F80DCDD54A5236B348B0BA073E106B /* RSSelectionMenuController.swift in Sources */,
+				07F9856D9CC1E82BFED92FFAB40673E6 /* RSSelectionMenuDataSource.swift in Sources */,
+				E09F40BFE4BF744E3FA69EBC4A5796CA /* RSSelectionMenuDelegate.swift in Sources */,
+				7266CFA69F959C7BEFBD456E1DEDFB79 /* RSSelectionMenuSearchDelegate.swift in Sources */,
+				537CBF80DFA6F88345C41A13902F9A7A /* RSSelectionTableView.swift in Sources */,
+				724BF6F22CEDF5FFD945E971E9F6CF5A /* ViewControllerExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		211EC7B3F18A56F388051198AD6DF28D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSSelectionMenu;
+			target = F4BA747C8987B7580A893EC859D12686 /* RSSelectionMenu */;
+			targetProxy = 6A818850AB40D2D5BC2E5D95B849CA08 /* PBXContainerItemProxy */;
+		};
+		367690D133B65E181898D8B59D834CF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Fish";
+			target = 2894E1E1F3E2B3C4025165E805979541 /* Pods-Fish */;
+			targetProxy = D84298A7688B54F1C36E679D59194BF1 /* PBXContainerItemProxy */;
+		};
+		6A5B342B64588111D51FEB7AB6C215AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSSelectionMenu;
+			target = F4BA747C8987B7580A893EC859D12686 /* RSSelectionMenu */;
+			targetProxy = 465BC3289180DACF9DE0AB8F7BC7F9E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		14E26B8AA1D0C4F51FAFAB66659E4FBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA20B39C6A11856ECB567F673BF74A9 /* Pods-Fish.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Fish/Pods-Fish-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Fish/Pods-Fish.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		16955F4C6ABED1942EFDFA55B4928623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 038849C49B66565E0AC16D16A80B0F44 /* RSSelectionMenu.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RSSelectionMenu/RSSelectionMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RSSelectionMenu/RSSelectionMenu-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RSSelectionMenu/RSSelectionMenu.modulemap";
+				PRODUCT_MODULE_NAME = RSSelectionMenu;
+				PRODUCT_NAME = RSSelectionMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1A6C361917A69C9352E40412F1D87E03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E0DC28618405AA2403075D602571A02 /* Pods-Fish-FishUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Fish-FishUITests/Pods-Fish-FishUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Fish-FishUITests/Pods-Fish-FishUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2922143C2E3AD3D355E1AB51DC6A5A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E5CB039132C1729937CD30F26BE4DC9 /* Pods-FishTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FishTests/Pods-FishTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FishTests/Pods-FishTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7FE301D749028A2521D8E0B27B5CF3F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70BA1731495B2A114FB028429489B758 /* RSSelectionMenu.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RSSelectionMenu/RSSelectionMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RSSelectionMenu/RSSelectionMenu-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RSSelectionMenu/RSSelectionMenu.modulemap";
+				PRODUCT_MODULE_NAME = RSSelectionMenu;
+				PRODUCT_NAME = RSSelectionMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		871B6E28ABA34DAE69824AB9D22D3B7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		9186218C4F7CDDFFD8BF90C9F07FC65C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABE1A987967F03CEDD54AF68A79629B /* Pods-Fish.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Fish/Pods-Fish-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Fish/Pods-Fish.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		974117AC489AD426CABD99EA54A6404B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3479937E5887B6125A360768F51BE7BF /* Pods-FishTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FishTests/Pods-FishTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FishTests/Pods-FishTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD4078AA6B61C4CA157DA057E9C31B14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC749E3E604F47020C3E27B0C0DC3BC /* Pods-Fish-FishUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Fish-FishUITests/Pods-Fish-FishUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Fish-FishUITests/Pods-Fish-FishUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FC4E00E275280036A63B1A221135812 /* Build configuration list for PBXNativeTarget "Pods-Fish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E26B8AA1D0C4F51FAFAB66659E4FBC /* Debug */,
+				9186218C4F7CDDFFD8BF90C9F07FC65C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A9831171B5BFBD2D4405575BCF12B4A /* Build configuration list for PBXNativeTarget "Pods-Fish-FishUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A6C361917A69C9352E40412F1D87E03 /* Debug */,
+				DD4078AA6B61C4CA157DA057E9C31B14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4358BCB0C1D7B15523790143FEA84474 /* Build configuration list for PBXNativeTarget "RSSelectionMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FE301D749028A2521D8E0B27B5CF3F4 /* Debug */,
+				16955F4C6ABED1942EFDFA55B4928623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */,
+				871B6E28ABA34DAE69824AB9D22D3B7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FAF91B2F8483B4DEB444C9D677980A0 /* Build configuration list for PBXNativeTarget "Pods-FishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				974117AC489AD426CABD99EA54A6404B /* Debug */,
+				2922143C2E3AD3D355E1AB51DC6A5A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
