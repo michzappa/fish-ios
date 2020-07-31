@@ -25,6 +25,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var AskForCardBtn: UIButton!
     
     var player: Player? = nil;
+    var cardsCanAskFor: [String]? = nil;
     var roomName: String? = nil;
     var room: Room? = nil;
     var team: Team? = nil;
@@ -65,7 +66,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             return self.opponents?.count ?? 0
         }
         if pickerView.tag == 2 {
-            return self.player?.hand.count ?? 0
+            return self.cardsCanAskFor?.count ?? 0
         }
         
         return 1
@@ -76,7 +77,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             return self.opponents?[row].name ?? ""
         }
         if pickerView.tag == 2 {
-            return self.player?.hand[row] ?? ""
+            return self.cardsCanAskFor?[row] ?? ""
         }
         
         return "blank"
@@ -97,9 +98,40 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         self.LastMoveLabel.text = "Last Move: \(self.room?.move ?? "")"
         self.CurrentTurnLabel.text = "Turn: \(self.room?.turn ?? "")"
         
+        
+        self.refreshPlayerStruct()
+        self.refreshCardsAskFor()
+        
         self.SelectCardPicker.reloadAllComponents();
         self.SelectOpponentPicker.reloadAllComponents();
     }
+    
+    func refreshPlayerStruct(){
+        let url=URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/players/\(self.player!.id)")
+        guard let requestURL = url else { fatalError() }
+        
+        let task = session.dataTask(with: requestURL) {(data, response, error) in
+            guard let data = data else { return }
+            let player: Player = try! JSONDecoder().decode(Player.self, from: data)
+            self.player = player
+        }
+        
+        task.resume()
+    }
+    
+    func refreshCardsAskFor(){
+        let url=URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/players/\(self.player!.id)/can_ask_for")
+        guard let requestURL = url else { fatalError() }
+        
+        let task = session.dataTask(with: requestURL) {(data, response, error) in
+            guard let data = data else { return }
+            let cards: CardsCanAskFor = try! JSONDecoder().decode(CardsCanAskFor.self, from: data)
+            self.cardsCanAskFor = cards.can_ask_for
+        }
+        
+        task.resume()
+    }
+    
     // GETs the room struct from the server
     func refreshRoomStruct(){
         let url=URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/rooms/\(self.player!.room_id)")

@@ -28,3 +28,7 @@ struct Team: Decodable {
     let claims: [String]
     let room_id: Int
 }
+
+struct CardsCanAskFor: Decodable {
+    let can_ask_for: [String]
+}
