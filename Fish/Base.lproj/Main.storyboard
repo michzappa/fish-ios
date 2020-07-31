@@ -225,18 +225,28 @@
         <!--Make Claim-->
         <scene sceneID="Xl7-xN-IIh">
             <objects>
-                <viewController title="Make Claim" id="uqr-Gr-zrf" sceneMemberID="viewController">
+                <viewController title="Make Claim" id="uqr-Gr-zrf" customClass="ClaimViewController" customModule="Fish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MbB-HO-RYl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdg-aX-oAI">
+                                <rect key="frame" x="27" y="114" width="94" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select Cards"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xFm-tx-GXW"/>
                     </view>
                     <navigationItem key="navigationItem" id="che-8R-ZLd"/>
+                    <connections>
+                        <outlet property="SelectCards1Btn" destination="Cdg-aX-oAI" id="PFN-pJ-UPi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="if0-wf-DV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1504" y="137"/>
+            <point key="canvasLocation" x="1502.8985507246377" y="136.95652173913044"/>
         </scene>
     </scenes>
 </document>

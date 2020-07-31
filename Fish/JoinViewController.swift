@@ -49,9 +49,9 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 
     // Sends HTTP Post Request to server to create a room
     @objc func createRoom(){
-        print("Create Button tapped")
+        //print("Create Button tapped")
         let roomName = self.CreateRoomNameField.text
-        print(roomName!)
+        //print(roomName!)
         
         let url = URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/rooms")
         guard let requestUrl = url else { fatalError() }
@@ -71,7 +71,7 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                 }
             
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                print(dataString)
+                //print(dataString)
             }
         }
         task.resume()
@@ -81,10 +81,10 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     // deletes room with HTTP DELETE REQUEST
     @objc func deleteRoom(){
-        print("Delete Button tapped")
+        //print("Delete Button tapped")
         let selectedRoomIndex = self.RoomList.selectedRow(inComponent: 0)
         let roomName = self.roomNameList[selectedRoomIndex]
-        print(roomName)
+        //print(roomName)
         
         let url = URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/rooms/\(roomName)")
         guard let requestUrl = url else { fatalError() }
@@ -99,7 +99,7 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                 }
             
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                print(dataString)
+                //print(dataString)
             }
         }
         task.resume()

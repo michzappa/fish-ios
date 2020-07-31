@@ -73,7 +73,7 @@ class GameViewController: UIViewController {
         let task = session.dataTask(with: requestURL) {(data, response, error) in
             guard let data = data else { return }
             let room: Room = try! JSONDecoder().decode(Room.self, from: data)
-            print(room)
+            //print(room)
             self.room = room
         }
         
@@ -93,7 +93,7 @@ class GameViewController: UIViewController {
         let task = session.dataTask(with: requestURL) {(data, response, error) in
             guard let data = data else { return }
             let team: Team = try! JSONDecoder().decode(Team.self, from: data)
-            print(team)
+            //print(team)
             self.team = team
         }
         
@@ -107,7 +107,7 @@ class GameViewController: UIViewController {
         let task = session.dataTask(with: requestURL) {(data, response, error) in
             guard let data = data else { return }
             let players: [Player] = try! JSONDecoder().decode([Player].self, from: data)
-            print(players)
+            //print(players)
             self.teammates = players
         }
         
@@ -134,7 +134,7 @@ class GameViewController: UIViewController {
         let task = session.dataTask(with: requestURL) {(data, response, error) in
             guard let data = data else { return }
             let team: Team = try! JSONDecoder().decode(Team.self, from: data)
-            print(team)
+            //print(team)
             self.opponentTeam = team
         }
         
@@ -148,7 +148,7 @@ class GameViewController: UIViewController {
         let task = session.dataTask(with: requestURL) {(data, response, error) in
             guard let data = data else { return }
             let players: [Player] = try! JSONDecoder().decode([Player].self, from: data)
-            print(players)
+            //print(players)
             self.opponents = players
         }
         
