@@ -275,22 +275,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdg-aX-oAI">
-                                <rect key="frame" x="27" y="114" width="94" height="38"/>
-                                <state key="normal" title="Select Cards"/>
+                                <rect key="frame" x="20" y="355" width="94" height="60"/>
+                                <state key="normal" title="Teammate 1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytz-Wf-NbK">
+                                <rect key="frame" x="300" y="355" width="94" height="60"/>
+                                <state key="normal" title="Teammate 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9na-Ns-far">
+                                <rect key="frame" x="160" y="355" width="94" height="60"/>
+                                <state key="normal" title="Teammate 2"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Cdg-aX-oAI" firstAttribute="top" secondItem="xFm-tx-GXW" secondAttribute="top" constant="114" id="1U7-FY-50q"/>
-                            <constraint firstItem="xFm-tx-GXW" firstAttribute="trailing" secondItem="Cdg-aX-oAI" secondAttribute="trailing" constant="293" id="7SW-qu-tMT"/>
-                            <constraint firstItem="xFm-tx-GXW" firstAttribute="bottom" secondItem="Cdg-aX-oAI" secondAttribute="bottom" constant="564" id="U3O-x1-1uL"/>
-                            <constraint firstItem="Cdg-aX-oAI" firstAttribute="leading" secondItem="xFm-tx-GXW" secondAttribute="leading" constant="27" id="Wt6-H1-HOV"/>
+                            <constraint firstItem="Cdg-aX-oAI" firstAttribute="top" secondItem="xFm-tx-GXW" secondAttribute="top" constant="355" id="1U7-FY-50q"/>
+                            <constraint firstItem="xFm-tx-GXW" firstAttribute="trailing" secondItem="Cdg-aX-oAI" secondAttribute="trailing" constant="300" id="7SW-qu-tMT"/>
+                            <constraint firstItem="9na-Ns-far" firstAttribute="top" secondItem="ytz-Wf-NbK" secondAttribute="top" id="JzU-QQ-4R3"/>
+                            <constraint firstItem="xFm-tx-GXW" firstAttribute="bottom" secondItem="Cdg-aX-oAI" secondAttribute="bottom" constant="301" id="U3O-x1-1uL"/>
+                            <constraint firstItem="Cdg-aX-oAI" firstAttribute="leading" secondItem="xFm-tx-GXW" secondAttribute="leading" constant="20" id="Wt6-H1-HOV"/>
+                            <constraint firstItem="9na-Ns-far" firstAttribute="firstBaseline" secondItem="ytz-Wf-NbK" secondAttribute="baseline" id="ZA6-6t-fjk"/>
+                            <constraint firstItem="9na-Ns-far" firstAttribute="top" secondItem="Cdg-aX-oAI" secondAttribute="top" id="aFh-9E-Bxu"/>
+                            <constraint firstItem="9na-Ns-far" firstAttribute="centerX" secondItem="MbB-HO-RYl" secondAttribute="centerX" id="aVv-R3-Tcw"/>
+                            <constraint firstItem="9na-Ns-far" firstAttribute="leading" secondItem="Cdg-aX-oAI" secondAttribute="trailing" constant="46" id="g8V-Kg-rO8"/>
+                            <constraint firstItem="9na-Ns-far" firstAttribute="baseline" secondItem="ytz-Wf-NbK" secondAttribute="firstBaseline" id="olf-yt-VOh"/>
+                            <constraint firstItem="9na-Ns-far" firstAttribute="baseline" secondItem="Cdg-aX-oAI" secondAttribute="baseline" id="r67-8x-7Fv"/>
+                            <constraint firstItem="ytz-Wf-NbK" firstAttribute="leading" secondItem="9na-Ns-far" secondAttribute="trailing" constant="46" id="t3v-Yi-Z2z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xFm-tx-GXW"/>
                     </view>
                     <navigationItem key="navigationItem" id="che-8R-ZLd"/>
                     <connections>
                         <outlet property="SelectCards1Btn" destination="Cdg-aX-oAI" id="PFN-pJ-UPi"/>
+                        <outlet property="SelectCards2Btn" destination="9na-Ns-far" id="4a7-OJ-46g"/>
+                        <outlet property="SelectCards3Btn" destination="ytz-Wf-NbK" id="TvW-XR-SvJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="if0-wf-DV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

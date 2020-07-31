@@ -270,14 +270,16 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     func makeStringOfHand()->String{
         return self.player!.hand.joined(separator: ", ")
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "MakeClaim" {
+            if segue.destination is ClaimViewController {
+                let destination = segue.destination as! ClaimViewController
+                destination.teammate1 = self.teammates?[0] ?? nil
+                destination.teammate2 = self.teammates?[1] ?? nil
+                destination.teammate3 = self.teammates?[2] ?? nil
+            }
+        }
     }
-    */
 
 }

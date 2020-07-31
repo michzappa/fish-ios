@@ -147,14 +147,14 @@
 			children = (
 				4C409AF124D2590C00878B33 /* AppDelegate.swift */,
 				4C409AF324D2590C00878B33 /* SceneDelegate.swift */,
-				4C409AF524D2590C00878B33 /* JoinViewController.swift */,
 				4C409AF724D2590C00878B33 /* Main.storyboard */,
+				4C409AF524D2590C00878B33 /* JoinViewController.swift */,
+				4CB81D6924D4882F00DF9A1E /* ClaimViewController.swift */,
 				4CE1663824D36AA1000F1027 /* GameViewController.swift */,
 				4C409AFA24D2590D00878B33 /* Assets.xcassets */,
 				4C409AFC24D2590D00878B33 /* LaunchScreen.storyboard */,
 				4C409AFF24D2590D00878B33 /* Info.plist */,
 				4CB3B1F624D38E170063BDDB /* structs.swift */,
-				4CB81D6924D4882F00DF9A1E /* ClaimViewController.swift */,
 			);
 			path = Fish;
 			sourceTree = "<group>";
