@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		4C409AF224D2590C00878B33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C409AF124D2590C00878B33 /* AppDelegate.swift */; };
 		4C409AF424D2590C00878B33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C409AF324D2590C00878B33 /* SceneDelegate.swift */; };
-		4C409AF624D2590C00878B33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C409AF524D2590C00878B33 /* ViewController.swift */; };
+		4C409AF624D2590C00878B33 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C409AF524D2590C00878B33 /* JoinViewController.swift */; };
 		4C409AF924D2590C00878B33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C409AF724D2590C00878B33 /* Main.storyboard */; };
 		4C409AFB24D2590D00878B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C409AFA24D2590D00878B33 /* Assets.xcassets */; };
 		4C409AFE24D2590D00878B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C409AFC24D2590D00878B33 /* LaunchScreen.storyboard */; };
 		4C409B0924D2590E00878B33 /* FishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C409B0824D2590E00878B33 /* FishTests.swift */; };
 		4C409B1424D2590E00878B33 /* FishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C409B1324D2590E00878B33 /* FishUITests.swift */; };
+		4CB3B1F724D38E170063BDDB /* structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3B1F624D38E170063BDDB /* structs.swift */; };
 		4CE1663924D36AA1000F1027 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1663824D36AA1000F1027 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +40,7 @@
 		4C409AEE24D2590C00878B33 /* Fish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C409AF124D2590C00878B33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C409AF324D2590C00878B33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C409AF524D2590C00878B33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C409AF524D2590C00878B33 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		4C409AF824D2590C00878B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C409AFA24D2590D00878B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C409AFD24D2590D00878B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		4C409B0F24D2590E00878B33 /* FishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C409B1324D2590E00878B33 /* FishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishUITests.swift; sourceTree = "<group>"; };
 		4C409B1524D2590E00878B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CB3B1F624D38E170063BDDB /* structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structs.swift; sourceTree = "<group>"; };
 		4CE1663824D36AA1000F1027 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,12 +105,13 @@
 			children = (
 				4C409AF124D2590C00878B33 /* AppDelegate.swift */,
 				4C409AF324D2590C00878B33 /* SceneDelegate.swift */,
-				4C409AF524D2590C00878B33 /* ViewController.swift */,
+				4C409AF524D2590C00878B33 /* JoinViewController.swift */,
 				4C409AF724D2590C00878B33 /* Main.storyboard */,
 				4CE1663824D36AA1000F1027 /* GameViewController.swift */,
 				4C409AFA24D2590D00878B33 /* Assets.xcassets */,
 				4C409AFC24D2590D00878B33 /* LaunchScreen.storyboard */,
 				4C409AFF24D2590D00878B33 /* Info.plist */,
+				4CB3B1F624D38E170063BDDB /* structs.swift */,
 			);
 			path = Fish;
 			sourceTree = "<group>";
@@ -263,9 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE1663924D36AA1000F1027 /* GameViewController.swift in Sources */,
-				4C409AF624D2590C00878B33 /* ViewController.swift in Sources */,
+				4C409AF624D2590C00878B33 /* JoinViewController.swift in Sources */,
 				4C409AF224D2590C00878B33 /* AppDelegate.swift in Sources */,
 				4C409AF424D2590C00878B33 /* SceneDelegate.swift in Sources */,
+				4CB3B1F724D38E170063BDDB /* structs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

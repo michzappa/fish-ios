@@ -6,24 +6,9 @@
 //  Copyright © 2020 Michael Zappa. All rights reserved.
 //
 
-struct Room: Decodable {
-    let id: Int
-    let move: String
-    let name: String
-    let turn: String
-}
-
-struct Player: Decodable {
-    let hand: [String]
-    let id: Int
-    let name: String
-    let room_id: Int
-    let team_id: Int
-}
-
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // Outlets to UI Elements
     @IBOutlet weak var CreateRoomNameField: UITextField!
@@ -38,8 +23,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var roomNameList: [String] = [String]()
     
     // Values to pass on to the game view once properly initialized
-    var joinedRoomName: String? = "test";
-    var joiningPlayer: Player? = Player(hand: [], id: 1, name: "String", room_id: 1, team_id: 1);
+    var joinedRoomName: String? = nil
+    var joiningPlayer: Player? = nil
     
     var refreshTimer: Timer?
     
@@ -150,7 +135,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
             
             guard let data = data else { return }
-            //print(data)
+
             let player: Player = try! JSONDecoder().decode(Player.self, from: data)
             print(player)
             self.joiningPlayer = player
