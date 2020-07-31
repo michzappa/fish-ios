@@ -92,13 +92,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9L-Y3-f00">
-                                <rect key="frame" x="160" y="523" width="99" height="30"/>
-                                <state key="normal" title="Make Claim"/>
-                                <connections>
-                                    <segue destination="uqr-Gr-zrf" kind="show" identifier="MakeClaim" id="Ydg-hs-QhN"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hG-gR-ewP">
                                 <rect key="frame" x="77" y="27" width="260" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -167,6 +160,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9L-Y3-f00">
+                                <rect key="frame" x="160" y="629" width="99" height="30"/>
+                                <state key="normal" title="Make Claim"/>
+                                <connections>
+                                    <segue destination="uqr-Gr-zrf" kind="show" identifier="MakeClaim" id="Ydg-hs-QhN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -180,7 +180,7 @@
                             <constraint firstItem="b0n-oU-BVC" firstAttribute="leading" secondItem="7XN-ux-Gp3" secondAttribute="trailing" constant="74" id="EMs-Ec-feX"/>
                             <constraint firstItem="8hG-gR-ewP" firstAttribute="centerX" secondItem="3eY-l3-I22" secondAttribute="centerX" id="GnI-So-61A"/>
                             <constraint firstItem="smn-gz-X4G" firstAttribute="top" secondItem="7XN-ux-Gp3" secondAttribute="bottom" constant="45" id="J0E-yS-1Sp"/>
-                            <constraint firstItem="c9L-Y3-f00" firstAttribute="top" secondItem="XFY-qd-YLp" secondAttribute="bottom" constant="89" id="JSm-BR-O9b"/>
+                            <constraint firstItem="c9L-Y3-f00" firstAttribute="top" secondItem="XFY-qd-YLp" secondAttribute="bottom" constant="195" id="JSm-BR-O9b"/>
                             <constraint firstItem="c9L-Y3-f00" firstAttribute="leading" secondItem="AaA-oD-B0o" secondAttribute="leading" constant="160" id="Kpd-7P-a72"/>
                             <constraint firstItem="b0n-oU-BVC" firstAttribute="centerY" secondItem="7XN-ux-Gp3" secondAttribute="centerY" id="L00-sr-15b"/>
                             <constraint firstItem="8hG-gR-ewP" firstAttribute="top" secondItem="AaA-oD-B0o" secondAttribute="top" constant="27" id="L7W-OR-5oe"/>
@@ -190,14 +190,14 @@
                             <constraint firstItem="8hG-gR-ewP" firstAttribute="trailing" secondItem="0bO-1Q-urU" secondAttribute="trailing" id="WsT-r8-lpP"/>
                             <constraint firstItem="AaA-oD-B0o" firstAttribute="trailing" secondItem="b0n-oU-BVC" secondAttribute="trailing" constant="38" id="X50-tX-87M"/>
                             <constraint firstItem="kmw-Mn-bh5" firstAttribute="centerY" secondItem="RBW-vN-7wm" secondAttribute="centerY" id="d0U-7D-OrG"/>
-                            <constraint firstItem="AaA-oD-B0o" firstAttribute="bottom" secondItem="c9L-Y3-f00" secondAttribute="bottom" constant="183" id="e9H-vR-qIE"/>
+                            <constraint firstItem="AaA-oD-B0o" firstAttribute="bottom" secondItem="c9L-Y3-f00" secondAttribute="bottom" constant="77" id="e9H-vR-qIE"/>
                             <constraint firstItem="smn-gz-X4G" firstAttribute="leading" secondItem="AaA-oD-B0o" secondAttribute="leading" constant="37" id="fHw-Xr-h6c"/>
                             <constraint firstItem="AaA-oD-B0o" firstAttribute="trailing" secondItem="c9L-Y3-f00" secondAttribute="trailing" constant="155" id="gZE-sR-oDz"/>
                             <constraint firstItem="0bO-1Q-urU" firstAttribute="top" secondItem="8hG-gR-ewP" secondAttribute="bottom" constant="16" id="gsq-jY-GPs"/>
                             <constraint firstItem="SHH-NW-uyq" firstAttribute="top" secondItem="0bO-1Q-urU" secondAttribute="bottom" constant="8" id="jev-63-Wru"/>
                             <constraint firstItem="XFY-qd-YLp" firstAttribute="leading" secondItem="b0n-oU-BVC" secondAttribute="leading" id="lY4-qV-4Fu"/>
                             <constraint firstItem="b0n-oU-BVC" firstAttribute="top" secondItem="RBW-vN-7wm" secondAttribute="bottom" constant="22" id="q5f-Xm-smg"/>
-                            <constraint firstItem="c9L-Y3-f00" firstAttribute="top" secondItem="smn-gz-X4G" secondAttribute="bottom" constant="62" id="q7T-Vv-rfc"/>
+                            <constraint firstItem="c9L-Y3-f00" firstAttribute="top" secondItem="smn-gz-X4G" secondAttribute="bottom" constant="168" id="q7T-Vv-rfc"/>
                             <constraint firstItem="RBW-vN-7wm" firstAttribute="firstBaseline" secondItem="kmw-Mn-bh5" secondAttribute="firstBaseline" constant="-25" id="tn0-Tk-wrY"/>
                             <constraint firstItem="AaA-oD-B0o" firstAttribute="trailing" secondItem="RBW-vN-7wm" secondAttribute="trailing" constant="26" id="v67-TL-Sbu"/>
                             <constraint firstItem="RBW-vN-7wm" firstAttribute="leading" secondItem="kmw-Mn-bh5" secondAttribute="trailing" constant="86" id="vkR-WV-Cij"/>
