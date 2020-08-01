@@ -276,8 +276,8 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             if segue.destination is ClaimViewController {
                 let destination = segue.destination as! ClaimViewController
                 destination.teammate1 = self.teammates?[0] ?? nil
-                destination.teammate2 = self.teammates?[1] ?? nil
-                destination.teammate3 = self.teammates?[2] ?? nil
+                //destination.teammate2 = self.teammates?[1] ?? nil
+                //destination.teammate3 = self.teammates?[2] ?? nil
             }
         }
     }

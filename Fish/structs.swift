@@ -32,3 +32,12 @@ struct Team: Decodable {
 struct CardsCanAskFor: Decodable {
     let can_ask_for: [String]
 }
+
+struct HalfSuit: Equatable {
+    let name: String
+    let id: Int
+}
+
+struct CardsInHalfSuit: Decodable {
+    let cards: [String]
+}

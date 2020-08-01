@@ -9,10 +9,16 @@
 import UIKit
 import RSSelectionMenu
 class ClaimViewController: UIViewController {
-
+    let session = URLSession.shared
+    
+    @IBOutlet weak var SelectHalfsuitBtn: UIButton!
     @IBOutlet weak var SelectCards1Btn: UIButton!
     @IBOutlet weak var SelectCards2Btn: UIButton!
     @IBOutlet weak var SelectCards3Btn: UIButton!
+    
+    var selectedHalfsuitName: String = ""
+    var selectedHalfsuitID: Int = -1
+    var selectedHalfsuitCards: [String] = []
     
     var teammate1: Player? = nil;
     var teammate1Cards: [String] = []
@@ -33,23 +39,60 @@ class ClaimViewController: UIViewController {
         
         self.SelectCards3Btn.addTarget(self, action: #selector(setTeamamte3Claim), for: .touchDown)
         self.SelectCards3Btn.setTitle(self.teammate3?.name, for: .normal)
+        
+        self.SelectHalfsuitBtn.addTarget(self, action: #selector(showSelectHalfsuitMenu), for: .touchDown)
+    }
+    
+    @objc func showSelectHalfsuitMenu(){
+        let data: [HalfSuit] = [
+            HalfSuit(name: "Low Hearts", id: 0),
+            HalfSuit(name: "High Hearts", id: 1),
+            HalfSuit(name: "Low Diamonds", id: 2),
+            HalfSuit(name: "High Diamonds", id: 3),
+            HalfSuit(name: "Low Spades", id: 4),
+            HalfSuit(name: "High Spades", id: 5),
+            HalfSuit(name: "Low Clubs", id: 6),
+            HalfSuit(name: "High Clubs", id: 7),
+            HalfSuit(name: "Eights and Jokers", id: 8)]
+        let menu = RSSelectionMenu(dataSource: data) { (cell, halfsuit, indexPath) in
+            cell.textLabel?.text = halfsuit.name
+        }
+        menu.onDismiss = { selectedItems in
+            self.selectedHalfsuitName = selectedItems[0].name
+            self.selectedHalfsuitID = selectedItems[0].id
+            let url=URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/cards/\(self.selectedHalfsuitID)")
+            guard let requestURL = url else { fatalError() }
+            
+            let task = self.session.dataTask(with: requestURL) {(data, response, error) in
+                guard let data = data else { return }
+                let cardsInHalfSuit: CardsInHalfSuit = try! JSONDecoder().decode(CardsInHalfSuit.self, from: data)
+                //print(players)
+                self.selectedHalfsuitCards = cardsInHalfSuit.cards
+                print(self.selectedHalfsuitCards)
+            }
+            
+            task.resume()
+            print(self.selectedHalfsuitName, ", ", self.selectedHalfsuitID)
+        }
+        menu.show(from: self)
     }
     
     @objc func setTeamamte1Claim(){
-        self.showSelectMenu(teammateNum: 1)
+        self.showSelectCardsMenu(teammateNum: 1)
     }
     
     @objc func setTeamamte2Claim(){
-        self.showSelectMenu(teammateNum: 2)
+        self.showSelectCardsMenu(teammateNum: 2)
     }
     
     @objc func setTeamamte3Claim(){
-        self.showSelectMenu(teammateNum: 3)
+        self.showSelectCardsMenu(teammateNum: 3)
     }
     
-    func showSelectMenu(teammateNum: Int){
-        let data: [String] = ["2-S", "3-S", "4-S", "5-S", "6-S", "7-S"]
-        let menu = RSSelectionMenu(selectionStyle: .multiple, dataSource: data) { (cell, name, indexPath) in
+    func showSelectCardsMenu(teammateNum: Int){
+        //let data: [String] = ["2-S", "3-S", "4-S", "5-S", "6-S", "7-S"]
+        //let data: [String] = self.cardHalfsuitMap.
+        let menu = RSSelectionMenu(selectionStyle: .multiple, dataSource: self.selectedHalfsuitCards) { (cell, name, indexPath) in
             cell.textLabel?.text = name
         }
         menu.onDismiss = { selectedItems in
