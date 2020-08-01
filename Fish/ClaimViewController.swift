@@ -69,13 +69,16 @@ class ClaimViewController: UIViewController {
         print(url)
         print(json)
         let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
-                if let error = error {
-                        print("Error: \(error)")
-                        return
-                    }
-
                 if let data = data, let dataString = String(data: data, encoding: .utf8) {
                     print(dataString)
+                    switch dataString{
+                    case "{\"error\":\"invalid claim\"}":
+                        print("invalid claim")
+                    case "{\"error\":\"the specified cards are not all in play\"}":
+                        print("claim not in play")
+                    default:
+                        return
+                    }
                 }
         }
         task.resume()

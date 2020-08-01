@@ -65,14 +65,16 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
 
         let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
-                if let error = error {
-                    print("Error: \(error)")
-                    return
+               //print(data)
+                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                    //print(dataString)
+                    switch dataString {
+                        case "{\"error\":\"duplicate room name, creation failed\"}":
+                            print("duplicate room name, creation failed")
+                        default:
+                            print("Room created")
+                    }
                 }
-            
-            if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                print(dataString)
-            }
         }
         task.resume()
         
@@ -93,13 +95,9 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         request.httpMethod = "DELETE"
 
         let task = session.dataTask(with: request) { (data, response, error) in
-                if let error = error {
-                    print("Error: \(error)")
-                    return
-                }
-            
+            //print(data)
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                //print(dataString)
+                print(dataString)
             }
         }
         task.resume()
@@ -129,20 +127,20 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
 
         let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
-                if let error = error {
-                    print("Error: \(error)")
-                    return
-                }
-                else{
-                    guard let data = data else { return }
-
-                    let player: Player = try! JSONDecoder().decode(Player.self, from: data)
-                    print(player)
-                    self.joiningPlayer = player
-                    self.joinedRoomName = roomName
-            }
-            
-            
+                    if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                        //print(dataString)
+                        switch dataString{
+                            case "{\"error\":\"duplicate player name, creation failed\"}":
+                                print("duplicate player name, creation failed")
+                            case "{\"error\":\"both teams full\"}":
+                                print("both teams full")
+                            default:
+                                let player: Player = try! JSONDecoder().decode(Player.self, from: data)
+                                //print(player)
+                                self.joiningPlayer = player
+                                self.joinedRoomName = roomName
+                        }
+                    }
         }
         task.resume()
         

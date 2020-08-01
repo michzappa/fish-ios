@@ -78,13 +78,16 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
 
         let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
-                if let error = error {
-                        print("Error: \(error)")
-                        return
-                    }
-                
                 if let data = data, let dataString = String(data: data, encoding: .utf8) {
                     print(dataString)
+                    switch dataString.contains("error"){
+                    //case "{\"error\":\"a cannot ask for 2-Hearts\"}":
+                    case true:
+                        print("Not your turn")
+                    default:
+                        print("Good ask")
+                        
+                    }
                 }
         }
         task.resume()
