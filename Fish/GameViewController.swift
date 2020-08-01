@@ -219,21 +219,22 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         task.resume()
     }
     
-    func refreshOpponentState(){
-        var opponentTeamId: Int;
+    func opponentTeamId()->Int{
         if self.player!.team_id % 2 == 0 {
-            opponentTeamId = self.player!.team_id - 1
+            return self.player!.team_id - 1
         }
         else {
-            opponentTeamId = self.player!.team_id + 1
+            return self.player!.team_id + 1
         }
-        
-        refreshOpponentTeamStruct(id: opponentTeamId)
-        refreshOpponents(id: opponentTeamId)
     }
     
-    func refreshOpponentTeamStruct(id: Int){
-        let url=URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/teams/\(id)")
+    func refreshOpponentState(){
+        refreshOpponentTeamStruct()
+        refreshOpponents()
+    }
+    
+    func refreshOpponentTeamStruct(){
+        let url=URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/teams/\(self.opponentTeamId())")
         guard let requestURL = url else { fatalError() }
         
         let task = session.dataTask(with: requestURL) {(data, response, error) in
@@ -246,8 +247,8 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         task.resume()
     }
     
-    func refreshOpponents(id: Int){
-        let url=URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/teams/\(id)/players")
+    func refreshOpponents(){
+        let url=URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/teams/\(self.opponentTeamId())/players")
         guard let requestURL = url else { fatalError() }
         
         let task = session.dataTask(with: requestURL) {(data, response, error) in

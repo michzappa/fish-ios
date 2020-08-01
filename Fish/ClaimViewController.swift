@@ -129,8 +129,6 @@ class ClaimViewController: UIViewController {
     }
     
     func showSelectCardsMenu(teammateNum: Int){
-        //let data: [String] = ["2-S", "3-S", "4-S", "5-S", "6-S", "7-S"]
-        //let data: [String] = self.cardHalfsuitMap.
         let menu = RSSelectionMenu(selectionStyle: .multiple, dataSource: self.selectedHalfsuitCards) { (cell, name, indexPath) in
             cell.textLabel?.text = name
         }

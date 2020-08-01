@@ -49,9 +49,7 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 
     // Sends HTTP Post Request to server to create a room
     @objc func createRoom(){
-        //print("Create Button tapped")
         let roomName = self.CreateRoomNameField.text
-        //print(roomName!)
         
         let url = URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/rooms")
         guard let requestUrl = url else { fatalError() }
@@ -65,9 +63,7 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
 
         let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
-               //print(data)
                 if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                    //print(dataString)
                     switch dataString {
                         case "{\"error\":\"duplicate room name, creation failed\"}":
                             print("duplicate room name, creation failed")
@@ -83,10 +79,8 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     // deletes room with HTTP DELETE REQUEST
     @objc func deleteRoom(){
-        //print("Delete Button tapped")
         let selectedRoomIndex = self.RoomList.selectedRow(inComponent: 0)
         let roomName = self.roomNameList[selectedRoomIndex]
-        //print(roomName)
         
         let url = URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/rooms/\(roomName)")
         guard let requestUrl = url else { fatalError() }
@@ -95,7 +89,6 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         request.httpMethod = "DELETE"
 
         let task = session.dataTask(with: request) { (data, response, error) in
-            //print(data)
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
                 print(dataString)
             }
@@ -128,7 +121,6 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 
         let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
                     if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                        //print(dataString)
                         switch dataString{
                             case "{\"error\":\"duplicate player name, creation failed\"}":
                                 print("duplicate player name, creation failed")
@@ -136,7 +128,6 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                                 print("both teams full")
                             default:
                                 let player: Player = try! JSONDecoder().decode(Player.self, from: data)
-                                //print(player)
                                 self.joiningPlayer = player
                                 self.joinedRoomName = roomName
                         }
@@ -155,14 +146,10 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let task = session.dataTask(with: requestURL) {(data, response, error) in
             guard let data = data else { return }
             let rooms: [Room] = try! JSONDecoder().decode([Room].self, from: data)
-            //print(String(data: data, encoding: .utf8)!)
-            //print(rooms)
             self.roomNameList = []
             for room in rooms {
-                //print(room)
                 self.roomNameList.append(room.name)
             }
-            //print(self.roomNameList)
         }
         
         task.resume()
