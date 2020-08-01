@@ -8,6 +8,7 @@ target 'Fish' do
   # Pods for Fish
 
   pod 'RSSelectionMenu'
+  pod 'Alamofire', '~> 5.2'
   
   target 'FishTests' do
     inherit! :search_paths

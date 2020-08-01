@@ -20,6 +20,7 @@ class ClaimViewController: UIViewController {
     var selectedHalfsuitID: Int = -1
     var selectedHalfsuitCards: [String] = []
     
+    var teamId: Int? = nil;
     var teammate1: Player? = nil;
     var teammate1Cards: [String] = []
     var teammate2: Player? = nil;
@@ -41,6 +42,36 @@ class ClaimViewController: UIViewController {
         self.SelectCards3Btn.setTitle(self.teammate3?.name, for: .normal)
         
         self.SelectHalfsuitBtn.addTarget(self, action: #selector(showSelectHalfsuitMenu), for: .touchDown)
+    }
+    
+    // sends to the server at attempt to make specified claim
+    func makeClaim(){
+        let teammate1Id = self.teammate1!.id
+        let teammate2Id = self.teammate2!.id
+        let teammate3Id = self.teammate3!.id
+        
+        let url = URL(string: "https://glistening-stale-arcticfox.gigalixirapp.com/teams/\(self.teamId!)")
+        guard let requestUrl = url else { fatalError() }
+
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "PUT"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Powered by Swift!", forHTTPHeaderField: "X-Powered-By")
+        
+        let json: [String: Any] = ["\(teammate1Id)": self.teammate1Cards, "\(teammate2Id)": self.teammate2Cards, "\(teammate3Id)": self.teammate3Cards]
+        let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
+        
+        let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
+                if let error = error {
+                        print("Error: \(error)")
+                        return
+                    }
+                
+                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                    print(dataString)
+                }
+        }
+        task.resume()
     }
     
     @objc func showSelectHalfsuitMenu(){

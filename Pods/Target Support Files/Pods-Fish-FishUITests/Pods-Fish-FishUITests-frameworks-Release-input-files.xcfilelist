@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Fish-FishUITests/Pods-Fish-FishUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/RSSelectionMenu/RSSelectionMenu.framework
