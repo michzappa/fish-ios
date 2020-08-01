@@ -66,8 +66,6 @@ class ClaimViewController: UIViewController {
             "\(teammate3Id)": self.teammate3Cards]]
         let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
         
-        print(url)
-        print(json)
         let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
                 if let data = data, let dataString = String(data: data, encoding: .utf8) {
                     print(dataString)
