@@ -133,13 +133,16 @@ class JoinViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                     print("Error: \(error)")
                     return
                 }
-            
-            guard let data = data else { return }
+                else{
+                    guard let data = data else { return }
 
-            let player: Player = try! JSONDecoder().decode(Player.self, from: data)
-            print(player)
-            self.joiningPlayer = player
-            self.joinedRoomName = roomName
+                    let player: Player = try! JSONDecoder().decode(Player.self, from: data)
+                    print(player)
+                    self.joiningPlayer = player
+                    self.joinedRoomName = roomName
+            }
+            
+            
         }
         task.resume()
         

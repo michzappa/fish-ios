@@ -160,15 +160,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smn-gz-X4G">
-                                <rect key="frame" x="37" y="363.66666666666669" width="141" height="98.333333333333314"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="98.333333333333314" id="Ffe-j3-O97"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFY-qd-YLp">
                                 <rect key="frame" x="252" y="378" width="119" height="57"/>
                                 <constraints>
@@ -199,6 +190,15 @@
                                 </constraints>
                                 <state key="normal" title="Ask for Card"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smn-gz-X4G">
+                                <rect key="frame" x="37" y="325" width="141" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="Ffe-j3-O97"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -230,7 +230,7 @@
                             <constraint firstItem="7XN-ux-Gp3" firstAttribute="top" secondItem="kmw-Mn-bh5" secondAttribute="bottom" constant="70.666666666666657" id="aDe-QU-vH8"/>
                             <constraint firstItem="jd5-qv-zbE" firstAttribute="centerY" secondItem="JaW-RA-pqC" secondAttribute="centerY" id="aGe-xi-99U"/>
                             <constraint firstItem="AaA-oD-B0o" firstAttribute="trailing" secondItem="XFY-qd-YLp" secondAttribute="trailing" constant="43" id="dWs-wr-Fwm"/>
-                            <constraint firstItem="smn-gz-X4G" firstAttribute="top" secondItem="7XN-ux-Gp3" secondAttribute="bottom" constant="46.000000000000057" id="gNc-Cp-Qc3"/>
+                            <constraint firstItem="smn-gz-X4G" firstAttribute="top" secondItem="7XN-ux-Gp3" secondAttribute="bottom" constant="7.3333333333333144" id="gNc-Cp-Qc3"/>
                             <constraint firstItem="b0n-oU-BVC" firstAttribute="leading" secondItem="7XN-ux-Gp3" secondAttribute="trailing" constant="74" id="hAf-Cx-P6C"/>
                             <constraint firstItem="RBW-vN-7wm" firstAttribute="leading" secondItem="kmw-Mn-bh5" secondAttribute="trailing" constant="86" id="hNI-Md-EJX"/>
                             <constraint firstItem="kmw-Mn-bh5" firstAttribute="leading" secondItem="7XN-ux-Gp3" secondAttribute="leading" id="iWv-mX-6wd"/>
@@ -290,6 +290,11 @@
                                 <rect key="frame" x="157" y="58" width="100" height="30"/>
                                 <state key="normal" title="Select Halfsuit"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zP4-uu-DAN">
+                                <rect key="frame" x="167" y="621" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Make Claim"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -313,6 +318,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="che-8R-ZLd"/>
                     <connections>
+                        <outlet property="MakeClaimBtn" destination="zP4-uu-DAN" id="Duf-cO-zfT"/>
                         <outlet property="SelectCards1Btn" destination="Cdg-aX-oAI" id="PFN-pJ-UPi"/>
                         <outlet property="SelectCards2Btn" destination="9na-Ns-far" id="4a7-OJ-46g"/>
                         <outlet property="SelectCards3Btn" destination="ytz-Wf-NbK" id="TvW-XR-SvJ"/>

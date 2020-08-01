@@ -15,6 +15,7 @@ class ClaimViewController: UIViewController {
     @IBOutlet weak var SelectCards1Btn: UIButton!
     @IBOutlet weak var SelectCards2Btn: UIButton!
     @IBOutlet weak var SelectCards3Btn: UIButton!
+    @IBOutlet weak var MakeClaimBtn: UIButton!
     
     var selectedHalfsuitName: String = ""
     var selectedHalfsuitID: Int = -1
@@ -42,10 +43,11 @@ class ClaimViewController: UIViewController {
         self.SelectCards3Btn.setTitle(self.teammate3?.name, for: .normal)
         
         self.SelectHalfsuitBtn.addTarget(self, action: #selector(showSelectHalfsuitMenu), for: .touchDown)
+        self.MakeClaimBtn.addTarget(self, action: #selector(makeClaim), for: .touchDown)
     }
     
     // sends to the server at attempt to make specified claim
-    func makeClaim(){
+    @objc func makeClaim(){
         let teammate1Id = self.teammate1!.id
         let teammate2Id = self.teammate2!.id
         let teammate3Id = self.teammate3!.id
@@ -58,15 +60,20 @@ class ClaimViewController: UIViewController {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("Powered by Swift!", forHTTPHeaderField: "X-Powered-By")
         
-        let json: [String: Any] = ["\(teammate1Id)": self.teammate1Cards, "\(teammate2Id)": self.teammate2Cards, "\(teammate3Id)": self.teammate3Cards]
+        let json: [String: Any] = ["player_card_map":[
+            "\(teammate1Id)": self.teammate1Cards,
+            "\(teammate2Id)": self.teammate2Cards,
+            "\(teammate3Id)": self.teammate3Cards]]
         let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
         
+        print(url)
+        print(json)
         let task = session.uploadTask(with: request, from: jsonData) { (data, response, error) in
                 if let error = error {
                         print("Error: \(error)")
                         return
                     }
-                
+
                 if let data = data, let dataString = String(data: data, encoding: .utf8) {
                     print(dataString)
                 }
