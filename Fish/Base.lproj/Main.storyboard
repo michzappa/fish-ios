@@ -16,15 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiV-I2-0sf">
-                                <rect key="frame" x="162.66666666666666" y="106" width="88.666666666666657" height="30"/>
-                                <state key="normal" title="Create Room"/>
+                                <rect key="frame" x="131" y="106" width="152" height="30"/>
+                                <state key="normal" title="Create Entered Room"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vT3-DY-XUC">
-                                <rect key="frame" x="163" y="173" width="88" height="52"/>
+                                <rect key="frame" x="131" y="173" width="152" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="647-Ah-cH8"/>
                                 </constraints>
-                                <state key="normal" title="Delete Room"/>
+                                <state key="normal" title="Delete Selected Room"/>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sen-Ei-ckj">
                                 <rect key="frame" x="47" y="257" width="320" height="162"/>
@@ -37,51 +37,44 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkg-WM-shm">
-                                <rect key="frame" x="163" y="527" width="88" height="30"/>
-                                <state key="normal" title="Join Room"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EqB-Jf-yL2">
                                 <rect key="frame" x="116" y="453" width="182" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-Fo-1Y4">
-                                <rect key="frame" x="162" y="527" width="88" height="30"/>
-                                <state key="normal" title="Join Room"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSg-vz-Pv1">
                                 <rect key="frame" x="163" y="608" width="88" height="30"/>
-                                <state key="normal" title="Enter Room"/>
+                                <state key="normal" title="Join Room 2"/>
                                 <connections>
                                     <segue destination="20i-NY-iCq" kind="showDetail" identifier="JoinGame" id="loe-uC-WaO"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-Fo-1Y4">
+                                <rect key="frame" x="163" y="545" width="88" height="30"/>
+                                <state key="normal" title="Join Room 1"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="EqB-Jf-yL2" firstAttribute="top" secondItem="Sen-Ei-ckj" secondAttribute="bottom" constant="34" id="0Qm-hO-ccg"/>
-                            <constraint firstItem="EqB-Jf-yL2" firstAttribute="centerX" secondItem="Kkg-WM-shm" secondAttribute="centerX" id="0nh-Tc-WtS"/>
                             <constraint firstItem="vT3-DY-XUC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5vl-ZU-P8F"/>
                             <constraint firstItem="agB-nl-kKL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="6NK-5Z-vZG"/>
-                            <constraint firstItem="vT3-DY-XUC" firstAttribute="leading" secondItem="Kkg-WM-shm" secondAttribute="leading" id="6bB-Nu-1wq"/>
                             <constraint firstItem="agB-nl-kKL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="E3B-fD-bgQ"/>
+                            <constraint firstItem="mSg-vz-Pv1" firstAttribute="top" secondItem="eVk-Fo-1Y4" secondAttribute="bottom" constant="33" id="HkM-fz-Awf"/>
                             <constraint firstItem="agB-nl-kKL" firstAttribute="trailing" secondItem="EqB-Jf-yL2" secondAttribute="trailing" id="NbI-Ci-tDO"/>
-                            <constraint firstItem="mSg-vz-Pv1" firstAttribute="leading" secondItem="Kkg-WM-shm" secondAttribute="leading" id="Qgj-f6-6SO"/>
-                            <constraint firstItem="mSg-vz-Pv1" firstAttribute="top" secondItem="Kkg-WM-shm" secondAttribute="bottom" constant="51" id="Qzu-je-pah"/>
                             <constraint firstItem="Sen-Ei-ckj" firstAttribute="top" secondItem="vT3-DY-XUC" secondAttribute="bottom" constant="32" id="ROQ-8N-KhC"/>
                             <constraint firstItem="fiV-I2-0sf" firstAttribute="top" secondItem="agB-nl-kKL" secondAttribute="bottom" constant="34" id="TyB-vu-VQQ"/>
-                            <constraint firstItem="Kkg-WM-shm" firstAttribute="top" secondItem="EqB-Jf-yL2" secondAttribute="bottom" constant="40" id="U2J-8R-hCE"/>
                             <constraint firstItem="Sen-Ei-ckj" firstAttribute="centerX" secondItem="EqB-Jf-yL2" secondAttribute="centerX" id="ZRW-Ae-PY7"/>
+                            <constraint firstItem="eVk-Fo-1Y4" firstAttribute="trailing" secondItem="mSg-vz-Pv1" secondAttribute="trailing" id="aZs-Dc-PAO"/>
                             <constraint firstItem="agB-nl-kKL" firstAttribute="leading" secondItem="EqB-Jf-yL2" secondAttribute="leading" id="b4E-gc-W0e"/>
                             <constraint firstItem="agB-nl-kKL" firstAttribute="centerX" secondItem="fiV-I2-0sf" secondAttribute="centerX" id="bGC-jI-Ztg"/>
                             <constraint firstItem="fiV-I2-0sf" firstAttribute="centerX" secondItem="vT3-DY-XUC" secondAttribute="centerX" id="g8r-FW-tZe"/>
                             <constraint firstItem="vT3-DY-XUC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="173" id="gHC-zR-b2K"/>
-                            <constraint firstItem="fiV-I2-0sf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162.66666666666666" id="kG4-0S-cuf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVk-Fo-1Y4" secondAttribute="trailing" constant="164" id="lv0-bX-8T8"/>
-                            <constraint firstItem="eVk-Fo-1Y4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162" id="miO-lV-JEB"/>
-                            <constraint firstItem="eVk-Fo-1Y4" firstAttribute="baseline" secondItem="Kkg-WM-shm" secondAttribute="baseline" id="nWS-VZ-tY2"/>
-                            <constraint firstItem="mSg-vz-Pv1" firstAttribute="trailing" secondItem="Kkg-WM-shm" secondAttribute="trailing" id="rJz-UU-1gB"/>
+                            <constraint firstItem="eVk-Fo-1Y4" firstAttribute="top" secondItem="EqB-Jf-yL2" secondAttribute="bottom" constant="58" id="h8C-8e-wav"/>
+                            <constraint firstItem="fiV-I2-0sf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="kG4-0S-cuf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVk-Fo-1Y4" secondAttribute="trailing" constant="163" id="lv0-bX-8T8"/>
+                            <constraint firstItem="eVk-Fo-1Y4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="miO-lV-JEB"/>
+                            <constraint firstItem="eVk-Fo-1Y4" firstAttribute="leading" secondItem="mSg-vz-Pv1" secondAttribute="leading" id="qGy-IW-AAm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -131,13 +124,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmw-Mn-bh5">
-                                <rect key="frame" x="37" y="205" width="132" height="19.666666666666657"/>
+                                <rect key="frame" x="37" y="204.33333333333334" width="132" height="19.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XN-ux-Gp3">
-                                <rect key="frame" x="37" y="295" width="132" height="23"/>
+                                <rect key="frame" x="37" y="294.66666666666669" width="132" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="SDr-Zc-EKS"/>
                                 </constraints>
