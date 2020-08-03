@@ -17,14 +17,18 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiV-I2-0sf">
                                 <rect key="frame" x="131" y="106" width="152" height="30"/>
-                                <state key="normal" title="Create Entered Room"/>
+                                <state key="normal" title="Create Entered Room">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vT3-DY-XUC">
                                 <rect key="frame" x="131" y="173" width="152" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="647-Ah-cH8"/>
                                 </constraints>
-                                <state key="normal" title="Delete Selected Room"/>
+                                <state key="normal" title="Delete Selected Room">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sen-Ei-ckj">
                                 <rect key="frame" x="47" y="257" width="320" height="162"/>
@@ -34,6 +38,7 @@
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Room Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agB-nl-kKL">
                                 <rect key="frame" x="116" y="38" width="182" height="34"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -44,17 +49,21 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSg-vz-Pv1">
                                 <rect key="frame" x="163" y="608" width="88" height="30"/>
-                                <state key="normal" title="Join Room 2"/>
+                                <state key="normal" title="Join Room 2">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="20i-NY-iCq" kind="showDetail" identifier="JoinGame" id="loe-uC-WaO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-Fo-1Y4">
                                 <rect key="frame" x="163" y="545" width="88" height="30"/>
-                                <state key="normal" title="Join Room 1"/>
+                                <state key="normal" title="Join Room 1">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EqB-Jf-yL2" firstAttribute="top" secondItem="Sen-Ei-ckj" secondAttribute="bottom" constant="34" id="0Qm-hO-ccg"/>
                             <constraint firstItem="vT3-DY-XUC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5vl-ZU-P8F"/>
@@ -158,7 +167,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9L-Y3-f00">
                                 <rect key="frame" x="160" y="677" width="98" height="29"/>
-                                <state key="normal" title="Make Claim"/>
+                                <state key="normal" title="Make Claim">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="uqr-Gr-zrf" kind="show" identifier="MakeClaim" id="Ydg-hs-QhN"/>
                                 </connections>
@@ -175,7 +186,9 @@
                                     <constraint firstAttribute="height" constant="30" id="H9w-df-hMe"/>
                                     <constraint firstAttribute="width" constant="90" id="fBp-tF-TZt"/>
                                 </constraints>
-                                <state key="normal" title="Ask for Card"/>
+                                <state key="normal" title="Ask for Card">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smn-gz-X4G">
                                 <rect key="frame" x="37" y="325" width="141" height="153"/>
@@ -193,7 +206,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kmw-Mn-bh5" firstAttribute="top" secondItem="SHH-NW-uyq" secondAttribute="bottom" constant="4.3333333333333712" id="0NF-MJ-i8N"/>
                             <constraint firstItem="8hG-gR-ewP" firstAttribute="leading" secondItem="AaA-oD-B0o" secondAttribute="leading" constant="77" id="0cN-at-kfo"/>
@@ -269,27 +282,37 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdg-aX-oAI">
                                 <rect key="frame" x="20" y="355" width="94" height="60"/>
-                                <state key="normal" title="Teammate 1"/>
+                                <state key="normal" title="Teammate 1">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytz-Wf-NbK">
                                 <rect key="frame" x="300" y="355" width="94" height="60"/>
-                                <state key="normal" title="Teammate 3"/>
+                                <state key="normal" title="Teammate 3">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9na-Ns-far">
                                 <rect key="frame" x="160" y="355" width="94" height="60"/>
-                                <state key="normal" title="Teammate 2"/>
+                                <state key="normal" title="Teammate 2">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OR-K6-QIc">
                                 <rect key="frame" x="157" y="58" width="100" height="30"/>
-                                <state key="normal" title="Select Halfsuit"/>
+                                <state key="normal" title="Select Halfsuit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zP4-uu-DAN">
                                 <rect key="frame" x="167" y="621" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Make Claim"/>
+                                <state key="normal" title="Make Claim">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cdg-aX-oAI" firstAttribute="top" secondItem="xFm-tx-GXW" secondAttribute="top" constant="355" id="1U7-FY-50q"/>
                             <constraint firstItem="ytz-Wf-NbK" firstAttribute="trailing" secondItem="MbB-HO-RYl" secondAttribute="trailingMargin" id="4WI-2p-17J"/>
